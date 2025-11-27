@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f2f2f2;
+}
+
+/* HEADER */
+header{
+    background:#1a1a1a;
+    color:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ffcc00;
+}
+
+.search-bar{
+    display:flex;
+    align-items:center;
+    background:white;
+    padding:5px 10px;
+    border-radius:20px;
+    width:40%;
+}
+.search-bar input{
+    border:none;
+    outline:none;
+    width:100%;
+}
+.nav-icons i{
+    font-size:22px;
+    margin-left:15px;
+    cursor:pointer;
+}
+#cart-count{
+    background:red;
+    color:white;
+    padding:2px 6px;
+    border-radius:50%;
+    font-size:12px;
+}
+
+/* CATEGORIES */
+.categories{
+    display:flex;
+    gap:10px;
+    padding:15px;
+    overflow-x:auto;
+}
+.categories button{
+    padding:10px 20px;
+    background:#1a1a1a;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    padding:50px;
+    background:url('https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg') no-repeat center/cover;
+    color:white;
+    text-align:center;
+}
+.btn-hero{
+    padding:12px 25px;
+    background:#ffcc00;
+    border:none;
+    border-radius:30px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+/* PRODUITS */
+.products{
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
+    gap:20px;
+}
+.product{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.product:hover{
+    transform:translateY(-5px);
+}
+.product img{
+    width:100%;
+    height:180px;
+    border-radius:10px;
+    object-fit:cover;
+}
+.product h3{
+    margin:10px 0;
+}
+.product button{
+    width:100%;
+    padding:10px;
+    background:#1a1a1a;
+    color:white;
+    border:none;
+    margin-top:10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* PANIER */
+.cart-modal{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+.cart-box{
+    background:white;
+    width:90%;
+    max-width:450px;
+    padding:20px;
+    border-radius:10px;
+}
+.cart-items p{
+    border-bottom:1px solid #ddd;
+    padding:8px 0;
+}
+.cart-total{
+    font-size:20px;
+    margin:10px 0;
+}
+.close-cart{
+    background:red;
+    color:white;
+    padding:10px;
+    width:100%;
+    border:none;
+    margin-top:10px;
+    border-radius:8px;
+}
+.checkout{
+    background:green;
+    color:white;
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:none;
+}

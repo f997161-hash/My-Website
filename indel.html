@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingStore - Boutique Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">KingStore</div>
+
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Rechercher un produit..." onkeyup="searchProduct()">
+        <i class="fa fa-search"></i>
+    </div>
+
+    <div class="nav-icons">
+        <i class="fa fa-heart"></i>
+        <i class="fa fa-shopping-cart" onclick="openCart()">
+            <span id="cart-count">0</span>
+        </i>
+    </div>
+</header>
+
+<!-- CATEGORIES -->
+<section class="categories">
+    <button onclick="filterCategory('all')">Tous</button>
+    <button onclick="filterCategory('smartphone')">Smartphones</button>
+    <button onclick="filterCategory('accessoire')">Accessoires</button>
+    <button onclick="filterCategory('audio')">Audio</button>
+</section>
+
+<!-- BANNER -->
+<section class="hero">
+    <h1>Bienvenue chez KingStore</h1>
+    <p>Qualité • Rapidité • Confiance</p>
+    <button class="btn-hero">Acheter maintenant</button>
+</section>
+
+<!-- LISTE DES PRODUITS -->
+<section class="products" id="product-list">
+</section>
+
+<!-- PANIER -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-box">
+        <h2>Votre Panier</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            Total : <span id="cart-total">0</span> FCFA
+        </div>
+        <button class="checkout">Passer la commande</button>
+        <button onclick="closeCart()" class="close-cart">Fermer</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
